@@ -134,6 +134,7 @@ html,
 body {
   height: 100%;
   padding: 0% 2% 0% 2%;
+  background: #fcf6f6;
 }
 header {
   width: 100%;
@@ -149,19 +150,21 @@ header nav a {
   text-decoration: none;
   font-family: 'Alegreya Sans', sans-serif;
   font-size: 1.3rem;
+  text-shadow: 0.5px 0.5px pink;
   padding: 3%;
   color: #ac106b;
   /*border: 2px solid lightgreen;*/
 }
 header nav a:hover {
-  color: #ff17b9;
-  transform: scale(1.3, 1.3);
+  color: #e430bd;
+  transform: scale(1.4, 1.4);
   transition-delay: 1s;
   transition: 0.8s;
 }
 header .name-container {
   display: flex;
   justify-content: space-around;
+  border: 3px solid #f8bfdc;
   background: #ffe6ef;
   padding: 2%;
   width: 100%;
@@ -178,6 +181,7 @@ header .name-container .text-container {
 header .name-container h1 {
   /*border: 2px solid pink;*/
   font-family: 'Sacramento', cursive;
+  text-shadow: 1px 1px pink;
   color: #ac106b;
   font-size: 5.5rem;
   text-align: center;
@@ -186,6 +190,7 @@ header .name-container h3 {
   /*border: 2px solid pink;*/
   font-family: 'Alegreya Sans', sans-serif;
   color: #424242;
+  text-shadow: 1px 1px #e6d6d9;
   font-size: 2rem;
   text-align: center;
   padding: 3%;
@@ -193,8 +198,61 @@ header .name-container h3 {
 header .name-container .header-img {
   width: 30%;
   height: 100%;
+  border: 3px ridge #f5b1d3;
   /*border: 2px solid purple;*/
   background-image: url(../img/julie.jpg);
   background-size: cover;
   margin-left: 2%;
+}
+.first-section {
+  display: flex;
+  width: 100%;
+  height: 50vh;
+  padding-top: 1%;
+}
+.first-section h1 {
+  font-size: 3.5rem;
+  font-family: 'Sacramento', cursive;
+  color: #ac106b;
+}
+.first-section .about {
+  padding: 4%;
+  width: 50%;
+  text-align: center;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 1.6rem;
+}
+.first-section .about h1 {
+  padding-bottom: 4.5%;
+}
+.first-section .skills-container {
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 1.7rem;
+  text-align: center;
+}
+.first-section .skills-container .skills-logos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.first-section .skills-container .skills-logos .logo {
+  width: 50%;
+  justify-content: space-around;
+  padding-top: 5%;
+}
+.first-section .skills-container .skills-logos .first {
+  color: #ff4684;
+}
+.first-section .skills-container .skills-logos .second {
+  color: #f51fb5;
+}
+.first-section .skills-container .skills-logos .fourth {
+  color: #ca34cf;
+}
+.first-section .skills-container .skills-logos .third {
+  color: #7a4ac7;
 }
