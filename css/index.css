@@ -130,6 +130,12 @@ table {
 * {
   box-sizing: border-box;
 }
+.titles {
+  color: #ac106b;
+  text-align: center;
+  font-family: 'Sacramento', cursive;
+  font-size: 3rem;
+}
 html,
 body {
   height: 100%;
@@ -139,7 +145,6 @@ body {
 header {
   width: 100%;
   height: 95vh;
-  /*border: 2px solid purple;*/
 }
 header nav {
   display: flex;
@@ -153,7 +158,6 @@ header nav a {
   text-shadow: 0.5px 0.5px pink;
   padding: 3%;
   color: #ac106b;
-  /*border: 2px solid lightgreen;*/
 }
 header nav a:hover {
   color: #e430bd;
@@ -174,12 +178,10 @@ header .name-container .text-container {
   display: flex;
   flex-direction: column;
   align-items: center ;
-  /*border: 2px solid black;*/
   justify-content: center;
   width: 60%;
 }
 header .name-container h1 {
-  /*border: 2px solid pink;*/
   font-family: 'Sacramento', cursive;
   text-shadow: 1px 1px pink;
   color: #ac106b;
@@ -207,13 +209,15 @@ header .name-container .header-img {
 .first-section {
   display: flex;
   width: 100%;
-  height: 50vh;
+  height: 68vh;
   padding-top: 1%;
+  border-bottom: 2px dotted #b3b3b3;
 }
 .first-section h1 {
-  font-size: 3.5rem;
-  font-family: 'Sacramento', cursive;
   color: #ac106b;
+  text-align: center;
+  font-family: 'Sacramento', cursive;
+  font-size: 3rem;
 }
 .first-section .about {
   padding: 4%;
@@ -223,7 +227,7 @@ header .name-container .header-img {
   font-size: 1.6rem;
 }
 .first-section .about h1 {
-  padding-bottom: 4.5%;
+  padding-bottom: 5%;
 }
 .first-section .skills-container {
   padding: 3%;
@@ -237,22 +241,96 @@ header .name-container .header-img {
 .first-section .skills-container .skills-logos {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .first-section .skills-container .skills-logos .logo {
-  width: 50%;
-  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
   padding-top: 5%;
+  border: 2px solid gray;
+  margin: 2%;
+  padding: 1%;
 }
 .first-section .skills-container .skills-logos .first {
+  padding: 4%;
   color: #ff4684;
 }
 .first-section .skills-container .skills-logos .second {
+  padding: 4%;
   color: #f51fb5;
 }
 .first-section .skills-container .skills-logos .fourth {
   color: #ca34cf;
+  padding: 2%;
 }
 .first-section .skills-container .skills-logos .third {
   color: #7a4ac7;
+  padding: 4%;
+}
+.second-section {
+  /*border: 2px solid purple;*/
+  width: 100%;
+  height: 108vh;
+}
+.second-section h1 {
+  color: #ac106b;
+  text-align: center;
+  font-family: 'Sacramento', cursive;
+  font-size: 3rem;
+  padding: 4% 0% 2% 0%;
+}
+.second-section h2 {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: 0.5px solid #b3b3b3;
+  width: 40%;
+  text-align: center;
+  padding: 1% 0% 1% 0%;
+  background: #ffe6ef;
+}
+.second-section p {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 1.3rem;
+  border: 0.5px solid #b3b3b3;
+  width: 40%;
+  text-align: center;
+  padding: 1% 0% 1% 0%;
+}
+.second-section .work {
+  display: flex;
+}
+.second-section .education {
+  display: flex;
+}
+footer {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 3px solid #f5b1d3;
+  background: #f3edf0;
+}
+footer h1 {
+  color: #ac106b;
+  text-align: center;
+  font-family: 'Sacramento', cursive;
+  font-size: 3rem;
+  padding-top: 1.5%;
+}
+footer nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+footer nav a {
+  text-decoration: none;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 1.5rem;
+  padding: 1%;
+  color: #424242;
 }
