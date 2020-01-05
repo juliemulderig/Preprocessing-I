@@ -130,6 +130,12 @@ table {
 * {
   box-sizing: border-box;
 }
+.hoverPink {
+  color: #ac106b;
+  transform: scale(1.3, 1.3);
+  transition-delay: 1s;
+  transition: 0.8s;
+}
 .titles {
   color: #ac106b;
   text-align: center;
@@ -154,14 +160,14 @@ header nav {
 header nav a {
   text-decoration: none;
   font-family: 'Alegreya Sans', sans-serif;
-  font-size: 1.3rem;
-  text-shadow: 0.5px 0.5px pink;
+  font-size: 1.5rem;
+  /*text-shadow: .5px .5px rgb(243, 115, 136);*/
   padding: 3%;
-  color: #ac106b;
+  color: #424242;
 }
 header nav a:hover {
-  color: #e430bd;
-  transform: scale(1.4, 1.4);
+  color: #ac106b;
+  transform: scale(1.3, 1.3);
   transition-delay: 1s;
   transition: 0.8s;
 }
@@ -174,12 +180,28 @@ header .name-container {
   width: 100%;
   height: 83%;
 }
-header .name-container .text-container {
+@media (max-width: 768px) {
+  header .name-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+header .name-container .header-text {
   display: flex;
   flex-direction: column;
   align-items: center ;
   justify-content: center;
   width: 60%;
+}
+@media (max-width: 1000px) {
+  header .name-container .header-text {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  header .name-container .header-text {
+    height: 50vh;
+  }
 }
 header .name-container h1 {
   font-family: 'Sacramento', cursive;
@@ -187,6 +209,11 @@ header .name-container h1 {
   color: #ac106b;
   font-size: 5.5rem;
   text-align: center;
+}
+@media (max-width: 758px) {
+  header .name-container h1 {
+    font-size: 3.5rem;
+  }
 }
 header .name-container h3 {
   /*border: 2px solid pink;*/
@@ -201,17 +228,33 @@ header .name-container .header-img {
   width: 30%;
   height: 100%;
   border: 3px ridge #f5b1d3;
-  /*border: 2px solid purple;*/
+  border: 2px solid purple;
   background-image: url(../img/julie.jpg);
   background-size: cover;
   margin-left: 2%;
 }
+@media (max-width: 1000px) {
+  header .name-container .header-img {
+    width: 40%;
+  }
+}
+@media (max-width: 768px) {
+  header .name-container .header-img {
+    height: 50vh;
+  }
+}
 .first-section {
   display: flex;
   width: 100%;
-  height: 68vh;
+  height: 100vh;
   padding-top: 1%;
   border-bottom: 2px dotted #b3b3b3;
+}
+@media (max-width: 768px) {
+  .first-section {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .first-section h1 {
   color: #ac106b;
@@ -221,10 +264,11 @@ header .name-container .header-img {
 }
 .first-section .about {
   padding: 4%;
-  width: 50%;
+  width: 100%;
   text-align: center;
   font-family: 'Alegreya Sans', sans-serif;
   font-size: 1.6rem;
+  border: 2px solid green;
 }
 .first-section .about h1 {
   padding-bottom: 5%;
@@ -233,10 +277,11 @@ header .name-container .header-img {
   padding: 3%;
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
   font-family: 'Alegreya Sans', sans-serif;
   font-size: 1.7rem;
   text-align: center;
+  border: 2px solid purple;
 }
 .first-section .skills-container .skills-logos {
   display: flex;
@@ -251,21 +296,43 @@ header .name-container .header-img {
   padding-top: 5%;
   border: 2px solid gray;
   margin: 2%;
-  padding: 1%;
 }
-.first-section .skills-container .skills-logos .first {
+@media (max-width: 1000px) {
+  .first-section .skills-container .skills-logos .logo {
+    width: 40%;
+  }
+}
+@media (max-width: 768px) {
+  .first-section .skills-container .skills-logos .logo {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 500px) {
+  .first-section .skills-container .skills-logos .logo {
+    font-size: 1rem;
+  }
+}
+.first-section .skills-container .skills-logos .logo:hover {
+  color: #ac106b;
+  transform: scale(1.3, 1.3);
+  transition-delay: 1s;
+  transition: 0.8s;
+  transform: scale(1.1, 1.1);
+  border: 2px dotted pink;
+}
+.first-section .first {
   padding: 4%;
   color: #ff4684;
 }
-.first-section .skills-container .skills-logos .second {
+.first-section .second {
   padding: 4%;
   color: #f51fb5;
 }
-.first-section .skills-container .skills-logos .fourth {
+.first-section .fourth {
   color: #ca34cf;
   padding: 2%;
 }
-.first-section .skills-container .skills-logos .third {
+.first-section .third {
   color: #7a4ac7;
   padding: 4%;
 }
@@ -309,6 +376,7 @@ footer {
   width: 100%;
   height: 30vh;
   display: flex;
+  margin-bottom: 4%;
   flex-direction: column;
   justify-content: center;
   border: 3px solid #f5b1d3;
@@ -320,6 +388,7 @@ footer h1 {
   font-family: 'Sacramento', cursive;
   font-size: 3rem;
   padding-top: 1.5%;
+  color: #ff4684;
 }
 footer nav {
   display: flex;
@@ -333,4 +402,11 @@ footer nav a {
   font-size: 1.5rem;
   padding: 1%;
   color: #424242;
+}
+footer nav a:hover {
+  color: #ac106b;
+  transform: scale(1.3, 1.3);
+  transition-delay: 1s;
+  transition: 0.8s;
+  transform: scale(1.2, 1.2);
 }
