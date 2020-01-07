@@ -270,7 +270,7 @@ header .name-container h3 {
   }
 }
 header .name-container .header-img {
-  width: 35%;
+  width: 30%;
   height: 100%;
   border: 3px ridge #f5b1d3;
   background-image: url(../img/julie.jpg);
@@ -297,6 +297,11 @@ header .name-container .header-img {
 @media (max-width: 850px) {
   header .name-container .header-img {
     width: 50%;
+  }
+}
+@media (max-width: 800px) {
+  header .name-container .header-img {
+    width: 60%;
   }
 }
 @media (max-width: 768px) {
