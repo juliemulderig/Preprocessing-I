@@ -1,1 +1,543 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+.hoverPink {
+  color: #ac106b;
+  transform: scale(1.3, 1.3);
+  transition-delay: 1s;
+  transition: 0.8s;
+}
+.titles {
+  color: #ac106b;
+  text-align: center;
+  font-family: 'Sacramento', cursive;
+  font-size: 3rem;
+}
+html,
+body {
+  height: 100%;
+  padding: 0% 2% 0% 2%;
+  background: #fcf6f6;
+}
+header {
+  width: 100%;
+  height: 95vh;
+}
+@media (max-width: 768px) {
+  header {
+    height: 130vh;
+  }
+}
+header nav {
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 1100px) {
+  header nav {
+    padding: 1%;
+  }
+}
+@media (max-width: 768px) {
+  header nav {
+    justify-content: space-between;
+    padding: 3% 1% 4% 1%;
+  }
+}
+header nav a {
+  text-decoration: none;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 1.5rem;
+  /*text-shadow: .5px .5px rgb(243, 115, 136);*/
+  padding: 3%;
+  color: #424242;
+}
+header nav a:hover {
+  color: #ac106b;
+  transform: scale(1.3, 1.3);
+  transition-delay: 1s;
+  transition: 0.8s;
+}
+header .name-container {
+  display: flex;
+  justify-content: space-around;
+  border: 3px solid #f8bfdc;
+  background: #ffe6ef;
+  padding: 2%;
+  width: 100%;
+  height: 83vh;
+}
+@media (max-width: 1100px) {
+  header .name-container {
+    align-items: center;
+  }
+}
+@media (max-width: 768px) {
+  header .name-container {
+    flex-direction: column;
+    height: 115vh;
+    padding: 4%;
+  }
+}
+@media (max-width: 500px) {
+  header .name-container {
+    height: 110vh;
+    padding: 5%;
+  }
+}
+header .name-container .header-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center ;
+  justify-content: center;
+  width: 60%;
+}
+@media (max-width: 1100px) {
+  header .name-container .header-text {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  header .name-container .header-text {
+    width: 80%;
+    height: 20%;
+  }
+}
+@media (max-width: 500px) {
+  header .name-container .header-text {
+    width: 90%;
+    height: 30%;
+    padding-top: 6%;
+  }
+}
+header .name-container h1 {
+  font-family: 'Sacramento', cursive;
+  text-shadow: 1px 1px pink;
+  color: #ac106b;
+  font-size: 5.5rem;
+  text-align: center;
+}
+@media (max-width: 1100px) {
+  header .name-container h1 {
+    padding-bottom: 5%;
+    font-size: 5rem;
+  }
+}
+@media (max-width: 768px) {
+  header .name-container h1 {
+    font-size: 4rem;
+  }
+}
+header .name-container h3 {
+  font-family: 'Alegreya Sans', sans-serif;
+  color: #424242;
+  text-shadow: 1px 1px #e6d6d9;
+  font-size: 2rem;
+  text-align: center;
+  padding: 3%;
+}
+@media (max-width: 768px) {
+  header .name-container h3 {
+    font-size: 1.8rem;
+  }
+}
+header .name-container .header-img {
+  width: 30%;
+  height: 100%;
+  border: 3px ridge #f5b1d3;
+  background-image: url(../img/julie.jpg);
+  background-size: cover;
+  margin-left: 2%;
+}
+@media (max-width: 1100px) {
+  header .name-container .header-img {
+    width: 30%;
+    height: 90%;
+  }
+}
+@media (max-width: 1000px) {
+  header .name-container .header-img {
+    width: 36%;
+    height: 90%;
+  }
+}
+@media (max-width: 992px) {
+  header .name-container .header-img {
+    width: 35%;
+  }
+}
+@media (max-width: 850px) {
+  header .name-container .header-img {
+    width: 50%;
+  }
+}
+@media (max-width: 800px) {
+  header .name-container .header-img {
+    width: 60%;
+  }
+}
+@media (max-width: 768px) {
+  header .name-container .header-img {
+    width: 50%;
+    height: 60%;
+  }
+}
+@media (max-width: 621px) {
+  header .name-container .header-img {
+    width: 60%;
+  }
+}
+@media (max-width: 500px) {
+  header .name-container .header-img {
+    width: 70%;
+    height: 60%;
+  }
+}
+.first-section {
+  display: flex;
+  padding-top: 3%;
+}
+@media (max-width: 992px) {
+  .first-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 768px) {
+  .first-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.first-section h1 {
+  color: #ac106b;
+  text-align: center;
+  font-family: 'Sacramento', cursive;
+  font-size: 3rem;
+}
+.first-section .about {
+  padding: 4%;
+  width: 50%;
+  text-align: center;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 1.6rem;
+}
+@media (max-width: 992px) {
+  .first-section .about {
+    padding-bottom: 3%;
+    width: 80%;
+  }
+}
+.first-section .about h1 {
+  padding-bottom: 5%;
+}
+.first-section .skills-container {
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 1.7rem;
+  text-align: center;
+}
+@media (max-width: 992px) {
+  .first-section .skills-container {
+    width: 80%;
+  }
+}
+@media (max-width: 500px) {
+  .first-section .skills-container {
+    width: 90%;
+    padding-bottom: 10%;
+    padding-top: 10%;
+  }
+}
+.first-section .skills-logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 992px) {
+  .first-section .skills-logos {
+    padding-top: 3%;
+  }
+}
+.first-section .logo {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 30%;
+  padding-top: 5%;
+  border: 2px solid #8f8787;
+  margin: 2%;
+}
+@media (max-width: 1100px) {
+  .first-section .logo {
+    width: 35%;
+  }
+}
+@media (max-width: 992px) {
+  .first-section .logo {
+    width: 40%;
+    font-size: 1.6rem;
+  }
+}
+.first-section .logo:hover {
+  color: #ac106b;
+  transform: scale(1.3, 1.3);
+  transition-delay: 1s;
+  transition: 0.8s;
+  transform: scale(1.1, 1.1);
+  border: 2px dotted pink;
+}
+.first-section .first {
+  padding: 4%;
+  color: #ff4684;
+}
+.first-section .second {
+  padding: 4%;
+  color: #f51fb5;
+}
+.first-section .third {
+  color: #7a4ac7;
+  padding: 4%;
+}
+.first-section .fourth {
+  color: #ca34cf;
+  padding: 2%;
+}
+.second-section {
+  width: 100%;
+  border-top: 2px dotted pink;
+  padding-bottom: 6%;
+}
+@media (max-width: 500px) {
+  .second-section {
+    padding-bottom: 15%;
+  }
+}
+.second-section h1 {
+  color: #ac106b;
+  text-align: center;
+  font-family: 'Sacramento', cursive;
+  font-size: 3rem;
+  padding: 4% 0% 2% 0%;
+}
+@media (max-width: 500px) {
+  .second-section h1 {
+    font-size: 3rem;
+    padding: 6% 0% 6% 0%;
+  }
+}
+.second-section h2 {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: 0.5px solid #b3b3b3;
+  width: 40%;
+  text-align: center;
+  padding: 1% 0% 1% 0%;
+  background: #ffe6ef;
+}
+.second-section p {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 1.3rem;
+  border: 0.5px solid #b3b3b3;
+  width: 40%;
+  text-align: center;
+  padding: 1% 0% 1% 0%;
+}
+@media (max-width: 500px) {
+  .second-section p {
+    font-size: 1.1rem;
+    padding: 2%;
+  }
+}
+.second-section .work {
+  display: flex;
+}
+@media (max-width: 500px) {
+  .second-section .work {
+    padding: 0% 2% 0% 2%;
+  }
+}
+.second-section .education {
+  display: flex;
+}
+@media (max-width: 500px) {
+  .second-section .education {
+    padding: 0% 2% 0% 2%;
+  }
+}
+footer {
+  width: 100%;
+  display: flex;
+  margin-bottom: 3%;
+  flex-direction: column;
+  justify-content: center;
+  border: 3px solid #f5b1d3;
+  background: #f3edf0;
+  padding: 2%;
+}
+@media (max-width: 500px) {
+  footer {
+    margin-bottom: 4%;
+  }
+}
+footer h1 {
+  color: #ac106b;
+  text-align: center;
+  font-family: 'Sacramento', cursive;
+  font-size: 3rem;
+  padding-top: 1.5%;
+  color: #ff4684;
+}
+footer nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+footer nav a {
+  text-decoration: none;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 1.5rem;
+  padding: 1%;
+  color: #424242;
+}
+footer nav a:hover {
+  color: #ac106b;
+  transform: scale(1.3, 1.3);
+  transition-delay: 1s;
+  transition: 0.8s;
+  transform: scale(1.2, 1.2);
+}
